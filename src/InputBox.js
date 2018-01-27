@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 
 import ListItem from '../node_modules/material-ui/List/ListItem';
@@ -6,44 +6,70 @@ import TextField from '../node_modules/material-ui/TextField';
 import FlatButton from '../node_modules/material-ui/FlatButton';
 import {Card, CardActions} from '../node_modules/material-ui/Card';
 
-import {
-  pink400,
-} from '../node_modules/material-ui/styles/colors';
+const defaultColor = '#76FF03';
+const OnFocusColor = '#ff1744';
 
-const InputBox = ({callBackFunc, value}) => {
-  return (
-    <ListItem
-      disabled={true}
-    >
-      <Card>
-        <CardActions>
-          <TextField
-            hintText=""
-            floatingLabelText="Type your answer"
-            style={{width: '75%'}}
-            value={value}
-            onKeyPress={e => {
-                if (e.key === 'Enter') {
-                  console.log(e);
-                  callBackFunc(e.target.value);
-                  e.target.value = '';
-                }
-            }}
-          />
-          <FlatButton
-            backgroundColor={pink400}
-            icon={<i className="material-icons">mic</i>}
-            style={{width: '10%'}}
-          />
-          <FlatButton
-            backgroundColor={pink400}
-            icon={<i className="material-icons">camera_enhance</i>}
-            style={{width: '10%'}}
-          />
-        </CardActions>
-      </Card>
-    </ListItem>
-  );
+class InputBox extends Component {
+  switchColor(color) {
+    return color === defaultColor ? OnFocusColor : defaultColor;
+  }
+  constructor(props) {
+    super(props);
+    this.state = {
+      cameraColor: defaultColor,
+      micColor: defaultColor,
+    };
+  }
+  render() {
+    return (
+      <ListItem
+        disabled={true}
+      >
+        <Card>
+          <CardActions>
+            <TextField
+              hintText=""
+              floatingLabelText="Type your answer"
+              style={{width: '75%'}}
+              value={this.props.value}
+              onKeyPress={e => {
+                  if (e.key === 'Enter') {
+                    this.props.callBackFunc(e.target.value);
+                    e.target.value = '';
+                  }
+                  this.setState({
+                    micColor: defaultColor,
+                    cameraColor: defaultColor,
+                  });
+              }}
+            />
+            <FlatButton
+              backgroundColor={this.state.micColor}
+              icon={<i className="material-icons">mic</i>}
+              style={{width: '10%'}}
+              onClick={() => {
+                this.setState({
+                  micColor: this.switchColor(this.state.micColor),
+                  cameraColor: defaultColor,
+                });
+              }}
+            />
+            <FlatButton
+              backgroundColor={this.state.cameraColor}
+              icon={<i className="material-icons">camera_enhance</i>}
+              style={{width: '10%'}}
+              onClick={() => {
+                this.setState({
+                  micColor: defaultColor,
+                  cameraColor: this.switchColor(this.state.cameraColor),
+                });
+              }}
+            />
+          </CardActions>
+        </Card>
+      </ListItem>
+    );
+  }
 }
 
 export default InputBox;
