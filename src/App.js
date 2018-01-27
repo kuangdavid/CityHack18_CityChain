@@ -8,11 +8,11 @@ import Modify from './Modify';
 import './App.css';
 
 class App extends Component {
-  
+
   constructor(props) {
     super(props);
     this.state = {
-      page: 'Modify'
+      page: 'Result'
     };
   }
 

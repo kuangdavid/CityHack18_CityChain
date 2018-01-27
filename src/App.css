@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto|Slabo+27px');
 .App {
   text-align: center;
 }
@@ -20,14 +21,18 @@ html {
   color: white;
 }
 
-.App-title {
+.logo-mini, .logo-lg {
   font-size: 1.5em;
+  font-family: 'Raleway', sans-serif;
 }
 
 .App-intro {
   font-size: large;
 }
-
+#root{
+  width: 960px;
+  margin: 0 auto;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -38,6 +43,7 @@ html {
   padding-bottom: 80%;
   height: 0;
   max-width: 100%;
+  margin-bottom: 60px;
 }
 
 .embed-container iframe,
@@ -55,4 +61,37 @@ small {
   z-index: 40;
   bottom: 0;
   margin-bottom: -15px;
+}
+.result-container h1 h2 h3{
+  font-family: 'Raleway', sans-serif;
+}
+
+.result-container h3{
+  margin-bottom: 20px;
+}
+
+#result-summary{
+  font-family: 'Slabo 27px', serif;
+  font-size: 1.5em;
+}
+
+#result-summary strong{
+  color:darkred !important;
+}
+
+#result-summary p{
+  margin-bottom: 10px;
+}
+#result-summary .columns{
+  column-count: 2;
+  column-gap: 10px;
+  margin-top: 30px;
+}
+
+#result-summary .column_one{
+  break-after: column;
+}
+
+#result-summary .analysis{
+  font-family: 'Slabo 27px', serif;
 }
