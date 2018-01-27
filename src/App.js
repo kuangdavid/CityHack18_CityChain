@@ -58,7 +58,7 @@ class App extends Component {
     return (
       <List>
         {historyMessage}
-        <InputBox callBackFunc={(text) => {this.handleMessage(text)}}/>
+        <InputBox callBackFunc={(text) => {this.handleMessage(text)}} value={undefined}/>
       </List>
     );
   }

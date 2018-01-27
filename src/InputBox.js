@@ -10,7 +10,7 @@ import {
   pink400,
 } from '../node_modules/material-ui/styles/colors';
 
-const InputBox = ({callBackFunc}) => {
+const InputBox = ({callBackFunc, value}) => {
   return (
     <ListItem
       disabled={true}
@@ -18,12 +18,15 @@ const InputBox = ({callBackFunc}) => {
       <Card>
         <CardActions>
           <TextField
-            hintText="Hint Text"
-            floatingLabelText="Floating Label Text"
+            hintText=""
+            floatingLabelText="Type your answer"
             style={{width: '75%'}}
+            value={value}
             onKeyPress={e => {
                 if (e.key === 'Enter') {
+                  console.log(e);
                   callBackFunc(e.target.value);
+                  e.target.value = '';
                 }
             }}
           />
