@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 
 import Avatar from '../node_modules/material-ui/Avatar';
 import ListItem from '../node_modules/material-ui/List/ListItem';
 import {Card, CardText, CardActions} from '../node_modules/material-ui/Card';
 
-const getMessageDetail = ({text, time}) => {
+const getMessageDetail = (text, time, style) => {
   return (
     <Card>
-      <CardText style={{textAlign:'right'}}>
+      <CardText style={style}>
         {text}
       </CardText>
       <CardActions style={{textAlign:'right'}}>
@@ -35,26 +35,27 @@ const MessageBox = ({isQuestion, text, time}) => {
           />
         }
       >
-        {getMessageDetail(text, time)}
+        {getMessageDetail(text, time, {textAlign:'left'})}
       </ListItem>
     );
   } else {
     return (
       <ListItem
+        key={text}
         disabled={true}
-        leftAvatar={
+        rightAvatar={
           <Avatar
             icon={
-              <i className="material-icons orange600">face</i>
+              <img src="dist/img/user2-160x160.jpg" alt="User"/>
             }
-            color="#FFF9C4"
-            backgroundColor="#2E7D32"
+            color="#E0E0E0"
+            backgroundColor="#E64A19"
             size={30}
             style={{margin: 5}}
           />
         }
       >
-        {getMessageDetail(text, time)}
+        {getMessageDetail(text, time, {textAlign:'right'})}
       </ListItem>
     );
   }
