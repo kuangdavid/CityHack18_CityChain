@@ -1,0 +1,10 @@
+#result-summary{
+    text-align: left;
+    float: left;
+    display:block
+
+}
+
+.clear{
+    clear: both;
+}
