@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from '../node_modules/material-ui/styles/MuiThemeProvider';
 import Chat from './Chat';
+import Result from './Result';
 
 
 import './App.css';
@@ -10,7 +11,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: 'Chat'
+      page: 'Result'
     };
   }
 
@@ -18,6 +19,8 @@ class App extends Component {
     switch (this.state.page) {
       case 'Chat' :
         return (<Chat />);
+      case 'Result' :
+        return (<Result />);
     }
   }
 
