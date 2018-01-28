@@ -3,6 +3,14 @@
     display:block
 }
 
+#result-summary{
+  text-align: center;
+}
+
+#result-summary img{
+  margin-bottom: 20px;
+}
+
 .clear{
     clear: both;
 }
