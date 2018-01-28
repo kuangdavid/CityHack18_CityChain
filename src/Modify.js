@@ -149,6 +149,16 @@ class Modify extends Component {
 					defaultValue={'No'}
 			    />
 			</div>
+			<div>
+				<h3 style={{textAlign: 'left', marginLeft: '90px'}}>Suggestion</h3>
+				<h5 style={{textAlign: 'left', marginLeft: '90px'}}>Based on previous analysis, filling the below information provides better picture</h5>
+			    <TextField
+					floatingLabelText="Rent Value"
+					floatingLabelStyle={{color: this.state.field6Color}}
+					errorcolor={this.state.field6Text}
+					style={{width: '80%'}}
+			    />
+			</div>
 			{this.displayAction()}
 	  	</Card>
   	);
