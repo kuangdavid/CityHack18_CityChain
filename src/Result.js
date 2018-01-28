@@ -24,7 +24,8 @@ class Result extends Component {
         </Card>
         <Card style={{ margin: 5, padding: '10px' }}>
           <h1>Area Summary</h1>
-          <h3>Flood Risk Analysis.</h3>
+          <h3>Flood Risk Analysis</h3>
+
           <img src="dist/img/flood-data.png" title="Flood Risk Analysis"/>
 
           <h3>Crime Plus ASB Breakdown for SW3</h3>
