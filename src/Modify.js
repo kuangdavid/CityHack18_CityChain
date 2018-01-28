@@ -65,6 +65,7 @@ class Modify extends Component {
       			  label="Analyse"
       			  backgroundColor={successcolor}
 	              onClick={() => {
+	              	this.props.callBackFunc('Result');
 	              }}
 	            />
 			</CardActions>

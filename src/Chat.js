@@ -24,6 +24,7 @@ class Chat extends Component {
       case 6: 
         return '6';
       default:
+        this.props.callBackFunc('Modify');
         return 'default' + String(i);
     }
   }

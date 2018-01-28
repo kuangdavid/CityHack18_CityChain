@@ -11,21 +11,26 @@ class App extends Component {
 
   constructor(props) {
     super(props);
+    // Change the first page to display here.
     this.state = {
-      page: 'Modify'
+      page: 'Chat'
     };
   }
-
+  updatePage(page) {
+    this.setState({
+      page: page
+    })
+  }
   displayMain() {
     switch (this.state.page) {
       case 'Chat' :
-        return (<Chat />);
+        return (<Chat callBackFunc={(page) => {this.updatePage(page)}}/>);
       case 'Result' :
-        return (<Result />);
+        return (<Result callBackFunc={(page) => {this.updatePage(page)}}/>);
       case 'Modify' :
-        return (<Modify />);
+        return (<Modify callBackFunc={(page) => {this.updatePage(page)}}/>);
       default:
-        return (<Chat />);
+        return (<Chat callBackFunc={(page) => {this.updatePage(page)}}/>);
     }
   }
 
