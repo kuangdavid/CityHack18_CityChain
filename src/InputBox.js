@@ -32,6 +32,9 @@ class InputBox extends Component {
               floatingLabelText="Type your answer"
               style={{width: '75%', fontFamily: "Slabo 27px"}}
               value={this.props.value}
+              multiLine={true}
+              rows={2}
+              rowsMax={4}
               onKeyPress={e => {
                   if (e.key === 'Enter') {
                     this.props.callBackFunc(e.target.value);
