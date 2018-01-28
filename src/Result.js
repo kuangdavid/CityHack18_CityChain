@@ -11,15 +11,18 @@ class Result extends Component {
   }
   render() {
     return (
-      <Card style={{margin: 5}}>
-        <div id="result-container">
-          <div id="result-summary">
+      <div id="result-summary">
+      <Card style={{margin: 5, padding: '10px'}}>
+          <div>
             <h1>Interactive map</h1>
             <h3>The relevant information have been selected</h3>
             <div class="embed-container">
               <iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="SW3 Map" src="https://www.arcgis.com/apps/Embed/index.html?webmap=0cee0945bd78496da18981fa9e43561c&amp;extent=-0.2081,51.4729,-0.0813,51.518&zoom=true&previewImage=false&scale=true&disable_scroll=true&theme=light&legend=true"></iframe>
             </div>
             <div class="clear"></div>
+          </div>
+      </Card>
+      <Card style={{margin: 5, padding: '10px'}}>
               <h1>Smart planning analysis result</h1>
               <h3>Your criteria are aligned with the selected area.</h3>
               <div class="columns">
@@ -42,33 +45,12 @@ class Result extends Component {
                   </ul>
                 </div>
               </div>
-          </div>
-          <div class="clear"></div>
           <h3>
             Considering the previous analysis there is a projected ROI of <strong>15%</strong> in the next <strong>5 years</strong>.
           </h3>
-        </div>
-        <CardActions>
-          <FlatButton
-            icon={<i className="material-icons">print</i>}
-            style={{width: '30%'}}
-            label="Export to PDF"
-            backgroundColor={'#5cb85c'}
-          />
-          <FlatButton
-            icon={<i className="material-icons">screen_share</i>}
-            style={{width: '30%'}}
-            label="Share to Result"
-            backgroundColor={'#5cb85c'}
-          />
-          <FlatButton
-            icon={<i className="fa fa-facebook"></i>}
-            style={{width: '30%'}}
-            label="Post on Facebook"
-            backgroundColor={'#5cb85c'}
-          />
-      </CardActions>
+          <div class="clear"></div>
       </Card>
+      </div>
     );
   }
 }

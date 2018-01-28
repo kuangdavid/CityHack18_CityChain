@@ -44,7 +44,6 @@ html {
   padding-bottom: 80%;
   height: 0;
   max-width: 100%;
-  margin-bottom: 60px;
 }
 
 .embed-container iframe,
@@ -86,7 +85,7 @@ h1 h2 h3 h4 h5{
 }
 
 #result-summary strong{
-  color:darkred !important;
+  color:#c0392b !important;
 }
 
 #result-summary p{
