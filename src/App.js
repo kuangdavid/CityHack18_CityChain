@@ -13,7 +13,7 @@ class App extends Component {
     super(props);
     // Change the first page to display here.
     this.state = {
-      page: 'Result'
+      page: 'Chat'
     };
   }
   updatePage(page) {
