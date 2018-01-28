@@ -66,6 +66,28 @@ class Result extends Component {
           </h3>
           <div class="clear"></div>
         </Card>
+        <Card>
+        <CardActions>
+          <FlatButton
+            icon={<i className="material-icons">print</i>}
+            style={{width: '30%'}}
+            label="Export to PDF"
+            backgroundColor={'#5cb85c'}
+          />
+          <FlatButton
+            icon={<i className="material-icons">screen_share</i>}
+            style={{width: '30%'}}
+            label="Share to Result"
+            backgroundColor={'#5cb85c'}
+          />
+          <FlatButton
+            icon={<i className="fa fa-facebook"></i>}
+            style={{width: '30%'}}
+            label="Post on Facebook"
+            backgroundColor={'#5cb85c'}
+          />
+        </CardActions>
+      </Card>
       </div>
     );
   }
