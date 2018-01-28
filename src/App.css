@@ -91,6 +91,11 @@ h1 h2 h3 h4 h5{
 #result-summary p{
   margin-bottom: 10px;
 }
+
+#result-summary li{
+  text-align: left;
+}
+
 #result-summary .columns{
   column-count: 2;
   column-gap: 10px;
