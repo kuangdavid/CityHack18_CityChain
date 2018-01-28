@@ -6,8 +6,8 @@ import TextField from '../node_modules/material-ui/TextField';
 import FlatButton from '../node_modules/material-ui/FlatButton';
 import {Card, CardActions} from '../node_modules/material-ui/Card';
 
-const defaultColor = '#76FF03';
-const OnFocusColor = '#ff1744';
+const defaultColor = '#f1c40f';
+const OnFocusColor = '#2ecc71';
 
 class InputBox extends Component {
   switchColor(color) {
@@ -30,7 +30,7 @@ class InputBox extends Component {
             <TextField
               hintText=""
               floatingLabelText="Type your answer"
-              style={{width: '75%'}}
+              style={{width: '75%', fontFamily: "Slabo 27px"}}
               value={this.props.value}
               onKeyPress={e => {
                   if (e.key === 'Enter') {

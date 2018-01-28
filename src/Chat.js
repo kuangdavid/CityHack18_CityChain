@@ -15,13 +15,13 @@ class Chat extends Component {
   }
   getQuestions(i) {
     switch (i) {
-      case 1: 
-        return '1';
-      case 2: 
-        return '2';
-      case 4: 
-        return '4';
-      case 6: 
+      case 1:
+        return 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed feugiat mauris. Ut nibh magna, dictum consequat aliquet ut, rhoncus et tellus. Aliquam id commodo tortor, vitae pretium leo.';
+      case 2:
+        return 'Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed sit amet turpis rhoncus, auctor est vitae, consequat urna.';
+      case 4:
+        return 'Maecenas pretium augue a justo auctor semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos';
+      case 6:
         return '6';
       default:
         this.props.callBackFunc('Modify');
@@ -65,6 +65,7 @@ class Chat extends Component {
   render() {
     return (
       <div>
+        <h1> How may I help you?</h1>
         {this.displayBoxes()}
       </div>
     );
