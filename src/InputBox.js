@@ -6,8 +6,8 @@ import TextField from '../node_modules/material-ui/TextField';
 import FlatButton from '../node_modules/material-ui/FlatButton';
 import {Card, CardActions} from '../node_modules/material-ui/Card';
 
-const defaultColor = '#5cb85c';
-const OnFocusColor = '#d9534f';
+const defaultColor = '#f1c40f';
+const OnFocusColor = '#2ecc71';
 
 class InputBox extends Component {
   switchColor(color) {
