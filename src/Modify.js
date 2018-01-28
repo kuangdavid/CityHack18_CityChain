@@ -19,7 +19,7 @@ class Modify extends Component {
     	field3Color: successcolor,
     	field4Color: successcolor,
     	field5Color: successcolor,
-    	field6Color: errorcolor,
+    	field6Color: successcolor,
     	field1Text: 'This value is too high.',
     	field2Text: '',
     	field3Text: '',
@@ -32,7 +32,7 @@ class Modify extends Component {
   	if (this.state.isWarning) {
   		return (
   			<AppBar
-	          title="Warning Some parameters are not possible. Please adjust setting."
+	          title="Your request is not feasible within the area you selected, please adjust..."
 	          iconElementLeft={
 	          	<i className="material-icons" style={{fontSize: 45}}>error</i>
 	          }
@@ -43,7 +43,7 @@ class Modify extends Component {
   	} else {
 	  	return (
 	  		<AppBar
-	          title="Please click on Analyse"
+	          title="Your request is feasible within the area you selected"
 	          iconElementLeft={
 	          	<i className="material-icons" style={{fontSize: 45}}>done</i>
 	          }
@@ -76,17 +76,17 @@ class Modify extends Component {
   	return (
 	  	<Card>
 	  		<CardText>
-				With our Smart Robot, we analyse your conversation into business parameters as displaying below.
+				Please adjust the criterias below
 			</CardText>
 	  		<div>
 			    <TextField
-					floatingLabelText="Styled Floating Label Text"
+					floatingLabelText="Building Units"
 					floatingLabelStyle={{color: this.state.field1Color}}
 					errorcolor={this.state.field1Text}
 					style={{width: '80%'}}
-					defaultValue={100}
+					defaultValue={700}
 					onChange={e => {
-						if(parseInt(e.target.value, 10) < 50) {
+						if(parseInt(e.target.value, 10) <= 500) {
 							this.setState({
 								field1Text: '',
 								field1Color: successcolor,
@@ -103,113 +103,50 @@ class Modify extends Component {
 			</div>
 			<div>
 			    <TextField
-					floatingLabelText="Styled Floating Label Text"
+					floatingLabelText="Postcode"
 					floatingLabelStyle={{color: this.state.field2Color}}
 					errorcolor={this.state.field2Text}
 					style={{width: '80%'}}
-					defaultValue={100}
-					onChange={e => {
-						if(parseInt(e.target.value, 10) <= 100) {
-							this.setState({
-								field2Text: '',
-								field2Color: successcolor,
-							});
-						} else {
-							this.setState({
-								field2Text: 'This value is too high.',
-								field2Color: errorcolor,
-							});
-						}
-					}}
+					defaultValue={'SW3'}
 			    />
 			</div>
 			<div>
 			    <TextField
-					floatingLabelText="Styled Floating Label Text"
+					floatingLabelText="School proximity"
 					floatingLabelStyle={{color: this.state.field3Color}}
 					errorcolor={this.state.field3Text}
 					style={{width: '80%'}}
-					defaultValue={100}
-					onChange={e => {
-						if(parseInt(e.target.value, 10) <= 100) {
-							this.setState({
-								field3Text: '',
-								field3Color: successcolor,
-							});
-						} else {
-							this.setState({
-								field3Text: 'This value is too high.',
-								field3Color: errorcolor,
-							});
-						}
-					}}
+					defaultValue={'1 - 3 miles'}
 			    />
 			</div>
 			<div>
 			    <TextField
-					floatingLabelText="Styled Floating Label Text"
+					floatingLabelText="Demographic Age"
 					floatingLabelStyle={{color: this.state.field4Color}}
 					errorcolor={this.state.field4Text}
 					style={{width: '80%'}}
-					defaultValue={100}
-					onChange={e => {
-						if(parseInt(e.target.value, 10) <= 100) {
-							this.setState({
-								field4Text: '',
-								field4Color: successcolor,
-							});
-						} else {
-							this.setState({
-								field4Text: 'This value is too high.',
-								field4Color: errorcolor,
-							});
-						}
-					}}
+					defaultValue={'25 - 45'}
 			    />
 			</div>
 			<div>
 			    <TextField
-					floatingLabelText="Styled Floating Label Text"
+					floatingLabelText="Average Income"
 					floatingLabelStyle={{color: this.state.field5Color}}
 					errorcolor={this.state.field5Text}
 					style={{width: '80%'}}
-					defaultValue={100}
+					defaultValue={'75K - 125K'}
 					onChange={e => {
-						if(parseInt(e.target.value, 10) <= 100) {
-							this.setState({
-								field5Text: '',
-								field5Color: successcolor,
-							});
-						} else {
-							this.setState({
-								field5Text: 'This value is too high.',
-								field5Color: errorcolor,
-							});
-						}
+						
 					}}
 			    />
 			</div>
 			<div>
 			    <TextField
-					floatingLabelText="Styled Floating Label Text"
+					floatingLabelText="Flood Zone"
 					floatingLabelStyle={{color: this.state.field6Color}}
 					errorcolor={this.state.field6Text}
 					style={{width: '80%'}}
-					defaultValue={100}
-					onChange={e => {
-						if(parseInt(e.target.value, 10) < 50) {
-							this.setState({
-								field6Text: '',
-								field6Color: successcolor,
-								isWarning: this.state.field1Color === errorcolor
-							});
-						} else {
-							this.setState({
-								field6Text: 'This value is too high.',
-								field6Color: errorcolor,
-							});
-						}
-					}}
+					defaultValue={'No'}
 			    />
 			</div>
 			{this.displayAction()}

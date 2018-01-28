@@ -16,16 +16,16 @@ class Chat extends Component {
   getQuestions(i) {
     switch (i) {
       case 1:
-        return 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed feugiat mauris. Ut nibh magna, dictum consequat aliquet ut, rhoncus et tellus. Aliquam id commodo tortor, vitae pretium leo.';
+        return 'Are you a Business or an Individual?';
       case 2:
-        return 'Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed sit amet turpis rhoncus, auctor est vitae, consequat urna.';
+        return 'Which industry are you in? (Proptery/Finance/Provider)';
       case 4:
-        return 'Maecenas pretium augue a justo auctor semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos';
+        return 'What geographical area are you interested in?';
       case 6:
-        return '6';
+        return 'Please add details of your request...';
       default:
         this.props.callBackFunc('Modify');
-        return 'default' + String(i);
+        return 'Thank you';
     }
   }
   constructor(props) {
