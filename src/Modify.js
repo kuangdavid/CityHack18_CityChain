@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import AppBar from '../node_modules/material-ui/AppBar';
 import TextField from '../node_modules/material-ui/TextField';
 import FlatButton from '../node_modules/material-ui/FlatButton';
-import {Card, CardActions} from '../node_modules/material-ui/Card';
+import {Card, CardText, CardActions} from '../node_modules/material-ui/Card';
 
 import './App.css';
 
@@ -75,6 +75,9 @@ class Modify extends Component {
   displayParameters() {
   	return (
 	  	<Card>
+	  		<CardText>
+				With our Smart Robot, we analyse your conversation into business parameters as displaying below.
+			</CardText>
 	  		<div>
 			    <TextField
 					floatingLabelText="Styled Floating Label Text"
