@@ -12,7 +12,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: 'Result'
+      page: 'Modify'
     };
   }
 
@@ -24,6 +24,8 @@ class App extends Component {
         return (<Result />);
       case 'Modify' :
         return (<Modify />);
+      default:
+        return (<Chat />);
     }
   }
 
