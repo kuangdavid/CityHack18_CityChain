@@ -12,7 +12,7 @@ const getMessageDetail = (text, time, style) => {
         {text}
       </CardText>
       <CardActions style={{textAlign:'right'}}>
-        <h5><i className="material-icons" style={{ fontSize: '10px' }}>schedule</i>{time}</h5>
+        <h5><i className="material-icons" style={{ fontSize: '10px', paddingRight: '10px' }}>schedule</i>{time}</h5>
       </CardActions>
     </Card>
   );
@@ -46,10 +46,10 @@ const MessageBox = ({isQuestion, text, time}) => {
         rightAvatar={
           <Avatar
             icon={
-              <img src="dist/img/user2-160x160.jpg" alt="User"/>
+              <img src="dist/img/user2-160x160.png" alt="User"/>
             }
             color="#E0E0E0"
-            backgroundColor="#E64A19"
+            backgroundColor="#9b59b6"
             size={30}
             style={{margin: 5}}
           />
