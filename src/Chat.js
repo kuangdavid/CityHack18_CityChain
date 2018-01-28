@@ -18,7 +18,7 @@ class Chat extends Component {
       case 1:
         return 'Are you a Business or an Individual?';
       case 2:
-        return 'Which industry are you in? (Proptery/Finance/Provider)';
+        return 'Which industry are you in? (Property/Finance/Provider)';
       case 4:
         return 'What geographical area are you interested in?';
       case 6:
